@@ -93,7 +93,9 @@ void loop() {
     if (rxArm < SWITCH_ON) { Serial.println("DISARMED"); }
 
     //  Display SBUS Data
-    Serial.print(rxThrottle); Serial.print(rxRoll); Serial.print(rxPitch); Serial.print(rxYaw);
-    Serial.print(rxBuzzer); Serial.print(rssi); Serial.print(rxBat); Serial.print(rxArm); Serial.println(rxMode);
+    Serial.print(rxThrottle); Serial.print("\t"); Serial.print(rxRoll); Serial.print("\t"); Serial.print(rxPitch); Serial.print("\t"); Serial.print(rxYaw); Serial.print("\t");
+    Serial.print(rxBuzzer); Serial.print("\t"); Serial.print(rssi); Serial.print("\t"); Serial.print(rxBat); Serial.print("\t"); Serial.print(rxArm); Serial.print("\t"); Serial.println(rxMode);
   }
+
+  delay(500);
 }
