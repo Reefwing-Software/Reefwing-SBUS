@@ -88,9 +88,9 @@ void loop() {
     rxArm    = channels[7];
     rxMode   = channels[8];
 
-    if (lostFrame) { lostFrameCtr++; }
-    if (rxArm >= SWITCH_ON) { Serial.println("ARMED"); }
-    if (rxArm < SWITCH_ON) { Serial.println("DISARMED"); }
+    //  if (lostFrame) { lostFrameCtr++; }
+    //  if (rxArm >= SWITCH_ON) { Serial.println("ARMED"); }
+    //  if (rxArm < SWITCH_ON) { Serial.println("DISARMED"); }
 
     //  Display SBUS Data
     Serial.print(rxThrottle); Serial.print("\t"); Serial.print(rxRoll); Serial.print("\t"); Serial.print(rxPitch); Serial.print("\t"); Serial.print(rxYaw); Serial.print("\t");
