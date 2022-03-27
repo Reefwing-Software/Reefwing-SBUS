@@ -55,7 +55,7 @@ SBUS x8R(Serial1);
 uint16_t channels[16];
 uint16_t lostFrameCtr = 0;
 uint16_t rssi = 0, rxBat = 0, rxArm = 0, rxBuzzer = 0, rxMode = 0;
-uint16_t rxThrottle = 0, rxRoll = 0, rxPitch = 0, rxYaw = 0;
+int16_t rxThrottle = 0, rxRoll = 0, rxPitch = 0, rxYaw = 0;
 
 bool failSafe;
 bool lostFrame;
@@ -97,5 +97,5 @@ void loop() {
     Serial.print(rxBuzzer); Serial.print("\t"); Serial.print(rssi); Serial.print("\t"); Serial.print(rxBat); Serial.print("\t"); Serial.print(rxArm); Serial.print("\t"); Serial.println(rxMode);
   }
 
-  delay(500);
+  delay(10);
 }
