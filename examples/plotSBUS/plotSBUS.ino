@@ -24,20 +24,12 @@
   This sketch is designed to be used with the Arduino IDE Serial 
   Plotter (CTRL+SHFT+L). The vertical (y-axis) on the plotter
   auto scales and the x-axis is a fixed 500 points with each tick
-  mark indicative of a Serial.println(). With a 20 ms delay you see
-  10 seconds of data (i.e., 500 x 20 ms).
-
-  If you want to stop autoscaling, add the following to loop():
-  Serial.println("Min:MIN_SBUS, Max:MAX_SBUS");
-
-  
+  mark indicative of a Serial.println(). With a 10 ms delay you see
+  5 seconds of data (i.e., 500 x 10 ms).
 
 ******************************************************************/
 
 #include <NexgenSBUS.h>
-
-#define MIN_SBUS          172
-#define MAX_SBUS          1811
 
 uint16_t channels[16];
 bool failSafe, lostFrame;
@@ -49,6 +41,9 @@ SBUS x8R(Serial1);
 
    Usage:  plot("Humidity",humidity_value,false); // label, data , plots to follow?
            plot("Pressure",pressure_value,true);  // label, data, last plot.
+
+   Note:  labels can't contain a space, but can be an empty String
+          (i.e., "").
 
  ******************************************************************/
 
@@ -65,18 +60,18 @@ void setup() {
   Serial.begin(115200);
   while (!Serial);
 
-  Serial.println("Parsing SBUS packets...\n");
+  //  Start Parsing SBUS packets...
   x8R.begin();
 }
 
 void loop() {
   // Check for a valid SBUS packet from the X8R receiver
   if (x8R.read(&channels[0], &failSafe, &lostFrame)) {
-    plot("CH 1", channels[0], false);
-    plot("CH 2", channels[1], false);
-    plot("CH 3", channels[2], false);
-    plot("CH 4", channels[3], true);
+    plot("CH_1", channels[0], false);
+    plot("CH_2", channels[1], false);
+    plot("CH_3", channels[2], false);
+    plot("CH_4", channels[3], true);
   }
 
-  delay(120);  //  This delay shows 60 secs of data.
+  delay(10);  //  This delay shows 60 secs of data.
 }
