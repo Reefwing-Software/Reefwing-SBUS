@@ -86,5 +86,7 @@ This sketch is designed to be used with the Arduino IDE Serial Plotter (`CTRL+SH
 If you want to stop autoscaling, add the following to loop():
 
 ```c++
-Serial.println("Min: MIN_SBUS, Max: MAX_SBUS");
+Serial.println("Min: 172, Max: 1811");
 ```
+
+As this is a String you have to use the actual numbers for MIN_SBUS and MAX_SBUS. This feature of the Arduino IDE Plotter doesn't always work reliably!
