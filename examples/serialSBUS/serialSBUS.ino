@@ -69,12 +69,12 @@ void setup() {
   Serial.println("Parsing SBUS packets...\n");
   x8R.begin();
 
-  //  Display SBUS Channel Header
+  //  Display SBUS Channel Header to Serial
   Serial.println("CH 1\tCH 2\tCH 3\tCH 4\tCH 5\tCH 6\tCH 7\tCH 8\tCH 9");
 }
 
 void loop() {
-    // Check for valid SBUS packet from the X8R receiver
+  // Check for a valid SBUS packet from the X8R receiver
   if (x8R.read(&channels[0], &failSafe, &lostFrame)) {
     rxThrottle = map(channels[0], MIN_SBUS, MAX_SBUS, MIN_PULSEWIDTH, MAX_PULSEWIDTH);
     rxRoll  = map(channels[1], MIN_SBUS, MAX_SBUS, MIN_RATE_ROLL, MAX_RATE_ROLL);
