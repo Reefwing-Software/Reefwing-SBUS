@@ -1,6 +1,6 @@
 /******************************************************************
-  @file       serialSBUS
-  @brief      Display SBUS data via the Serial Port.
+  @file       plotSBUSino
+  @brief      Display SBUS data using the IDE Serial Plotter.
   @author     David Such
   @copyright  Please see the accompanying LICENSE file.
 
@@ -9,6 +9,14 @@
   Date:        27/03/22
 
   1.0 Original Release          27/03/22
+
+  This sketch will plot the first 4 channels of SBUS data to the
+  Arduino IDE Serial Plotter. The SBUS protocol returns a value 
+  between 172 and 1811 on each standard channel. The channel data 
+  is returned in an array as a 16 bit unsigned integer. 
+
+  The variables `lostFrame` and `failSafe`, returned by the SBUS 
+  class are booleans.
 
   This example sketch assumes that inverted SBUS data is being fed
   to pin 2 (D0/Rx) on the Nano 33 BLE (i.e., Serial1).

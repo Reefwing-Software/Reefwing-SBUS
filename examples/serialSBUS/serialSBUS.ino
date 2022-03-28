@@ -1,5 +1,5 @@
 /******************************************************************
-  @file       serialSBUS
+  @file       serialSBUS.ino
   @brief      Display SBUS data via the Serial Port.
   @author     David Such
   @copyright  Please see the accompanying LICENSE file.

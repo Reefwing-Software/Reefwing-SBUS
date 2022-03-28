@@ -37,9 +37,11 @@ Refer to Part 2 of our article on [How to Write your own Flight Controller Softw
 
 ## Examples
 
+### 1. Serial SBUS
+
 The serialSBUS example sketch will print out SBUS data to the Serial port. It assumes that inverted SBUS data is being fed to pin 2 (D0/Rx) on the Nano 33 BLE (i.e., Serial1).
 
-The data will be output on Serial via the USB port.
+The data will be output on Serial via the USB port. This sketch is a simple example of how you might assign the SBUS data from a remote control drone.
 
 We assign our transmitter controls as follows:
 
@@ -69,3 +71,20 @@ if (rxArm < SWITCH_ON) { Serial.println("DISARMED"); }
 ```
 
 The SBUS protocol returns a value between 172 and 1811 on each standard channel. The constant `SWITCH_ON` is halfway between these two values.
+
+### 2. Plot SBUS
+
+This example sketch will plot the first 4 channels of SBUS data to the Arduino IDE Serial Plotter. The SBUS protocol returns a value between 172 and 1811 on each standard channel. The channel data  is returned in an array as a 16 bit unsigned integer. 
+
+The variables `lostFrame` and `failSafe`, returned by the SBUS class are booleans.
+
+This example sketch assumes that inverted SBUS data is being fed to pin 2 (D0/Rx) on the Nano 33 BLE (i.e., Serial1).
+
+This sketch is designed to be used with the Arduino IDE Serial Plotter (`CTRL+SHFT+L`). The vertical (y-axis) on the plotter auto scales and the x-axis is a fixed 500 points with each tick mark indicative of a Serial.println(). With a 20 ms delay you see
+10 seconds of data (i.e., 500 x 20 ms).
+
+If you want to stop autoscaling, add the following to loop():
+
+```c++
+Serial.println("Min: MIN_SBUS, Max: MAX_SBUS");
+```
