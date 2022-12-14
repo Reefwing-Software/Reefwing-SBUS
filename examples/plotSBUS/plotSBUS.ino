@@ -5,10 +5,11 @@
   @copyright  Please see the accompanying LICENSE file.
 
   Code:        David Such
-  Version:     1.0
-  Date:        27/03/22
+  Version:     2.0.0
+  Date:        15/12/22
 
-  1.0 Original Release          27/03/22
+  1.0.0 Original Release        27/03/22
+  2.0.0 Change Repo & Branding  15/12/22
 
   This sketch will plot the first 4 channels of SBUS data to the
   Arduino IDE Serial Plotter. The SBUS protocol returns a value 
@@ -29,7 +30,7 @@
 
 ******************************************************************/
 
-#include <NexgenSBUS.h>
+#include <ReefwingSBUS.h>
 
 uint16_t channels[16];
 bool failSafe, lostFrame;

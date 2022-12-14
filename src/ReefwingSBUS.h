@@ -1,14 +1,15 @@
 /******************************************************************
-  @file       NexgenSBUS.h
+  @file       ReefwingSBUS.h
   @brief      SBUS Library for the Nano 33 BLE and Portenta H7.
   @author     David Such
   @copyright  Please see the accompanying LICENSE file.
 
   Code:        David Such
-  Version:     1.0
-  Date:        27/03/22
+  Version:     2.0.0
+  Date:        15/12/22
 
-  1.0 Original Release          27/03/22
+  1.0.0 Original Release        27/03/22
+  2.0.0 Change Repo & Branding  15/12/22
 
   Credits - Forked from the Bolder Flight Systems SBUS library and
             adapted for the Arduino Nano 33 BLE and Portenta H7.
@@ -40,8 +41,8 @@
 
 ******************************************************************/
 
-#ifndef NexgenSBUS_h
-#define NexgenSBUS_h
+#ifndef ReefwingSBUS_h
+#define ReefwingSBUS_h
 
 #include <Arduino.h>
 
@@ -117,4 +118,4 @@ class SBUS {
     float PolyVal(size_t PolySize, float *Coefficients, float X);
 };
 
-#endif  //  NexgenSBUS_h
+#endif  //  ReefwingSBUS_h

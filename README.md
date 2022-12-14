@@ -1,4 +1,4 @@
-# Nexgen SBUS
+# Reefwing SBUS
  
  SBUS Library for the Arduino Nano 33 BLE and Portenta H7.
 

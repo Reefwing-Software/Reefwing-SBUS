@@ -5,10 +5,11 @@
   @copyright  Please see the accompanying LICENSE file.
 
   Code:        David Such
-  Version:     1.0
-  Date:        27/03/22
+  Version:     2.0.0
+  Date:        15/12/22
 
-  1.0 Original Release          27/03/22
+  1.0.0 Original Release        27/03/22
+  2.0.0 Change Repo & Branding  15/12/22
 
   This example sketch assumes that inverted SBUS data is being fed
   to pin 2 (D0/Rx) on the Nano 33 BLE (i.e., Serial1).
@@ -29,7 +30,7 @@
 
 ******************************************************************/
 
-#include <NexgenSBUS.h>
+#include <ReefwingSBUS.h>
 
 #define MIN_RATE_ROLL    -60
 #define MIN_RATE_PITCH   -60
