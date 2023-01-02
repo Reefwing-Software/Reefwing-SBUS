@@ -1,15 +1,16 @@
 /******************************************************************
   @file       ReefwingSBUS.cpp
-  @brief      SBUS Library for the Nano 33 BLE and Portenta H7.
+  @brief      SBUS Library for the Nano 33 BLE.
   @author     David Such
   @copyright  Please see the accompanying LICENSE file.
 
   Code:        David Such
-  Version:     2.0.0
-  Date:        15/12/22
+  Version:     2.0.1
+  Date:        02/01/23
 
   1.0.0 Original Release        27/03/22
   2.0.0 Change Repo & Branding  15/12/22
+  2.0.1 Updated README          02/01/23
 
   Credits - Forked from the Bolder Flight Systems SBUS library and
             adapted for the Arduino Nano 33 BLE and Portenta H7.

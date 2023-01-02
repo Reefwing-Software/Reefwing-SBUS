@@ -5,11 +5,12 @@
   @copyright  Please see the accompanying LICENSE file.
 
   Code:        David Such
-  Version:     2.0.0
-  Date:        15/12/22
+  Version:     2.0.1
+  Date:        02/01/23
 
   1.0.0 Original Release        27/03/22
   2.0.0 Change Repo & Branding  15/12/22
+  2.0.1 Updated README          02/01/23
 
   This sketch will plot the first 4 channels of SBUS data to the
   Arduino IDE Serial Plotter. The SBUS protocol returns a value 

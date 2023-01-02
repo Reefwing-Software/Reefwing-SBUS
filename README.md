@@ -1,6 +1,8 @@
+![version](https://img.shields.io/github/v/tag/Reefwing-Software/Reefwing-SBUS) ![license](https://img.shields.io/badge/license-MIT-green) ![release](https://img.shields.io/github/release-date/Reefwing-Software/Reefwing-SBUS?color="red") ![open source](https://badgen.net/badge/open/source/blue?icon=github)
+
 # Reefwing SBUS
  
- SBUS Library for the Arduino Nano 33 BLE and Portenta H7.
+ SBUS Library for the Arduino Nano 33 BLE.
 
  ## The SBUS Protocol
 
